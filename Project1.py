@@ -3,7 +3,6 @@ import numpy as np
 from PIL import Image
 import pygame
 from sys import exit
-tensor = torch.Tensor([1,2,4])
 TEXT = "path-to-a-folder\\NewImage"
 class random_Image:
     def generate(x_size,y_size):
