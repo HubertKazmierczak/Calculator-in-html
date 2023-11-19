@@ -4,6 +4,9 @@ from PIL import Image
 import pygame
 from sys import exit
 TEXT = "path-to-a-folder\\NewImage"
+WIDTH = 400
+HEIGHT = 400
+FPS = 30
 class random_Image:
     def generate(x_size,y_size):
         image = Image.new(mode = "RGB",size = (x_size,y_size),color = (255,255,255))
@@ -25,10 +28,10 @@ class random_Image:
             image.save(text)
             animation.append(text)
         return animation
-from Project1 import random_Image
+from This_file import random_Image
 pygame.init()
-animation1 = random_Image.generate_animation(400,400,30)
-screen = pygame.display.set_mode((400,400))
+animation1 = random_Image.generate_animation(WIDTH,HEIGHT,FPS)
+screen = pygame.display.set_mode((WIDTH,HEIGHT))
 pygame.display.set_caption("Name")
 clock = pygame.time.Clock()
 index = 0
@@ -42,4 +45,4 @@ while True:
     screen.blit(pygame.image.load(animation1[index]),(0,0))
     pygame.display.update()
     index +=1
-    clock.tick(30)
+    clock.tick(FPS)
