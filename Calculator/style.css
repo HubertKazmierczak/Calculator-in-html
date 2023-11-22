@@ -1,0 +1,41 @@
+#div1{
+    background-color:darkgrey;
+    width: 400px;
+    height: 500px;
+    position:relative;
+    left: 35%;
+    top: 50px;
+}
+.button1{
+    background-color:gray;
+    position: absolute;
+    text-align: center;
+    border: 1px solid black;
+    width:40px;
+    height: 40px;
+    color:white;
+}
+
+#equation_frame{
+    width:380px;
+    height: 40px;
+    background-color: darkblue;
+    text-align: center;
+    position: relative;
+    left:10px;
+    top:10px;
+    color:black;
+}
+#equation_screen{
+    width:380px;
+    height: 40px;
+    background-color: darkblue;
+    text-align: center;
+    position: relative;
+    left:10px;
+    top:10px;
+    color:black;
+    word-break: break-all;
+    padding:5px 5px 5px 5px;
+
+}
