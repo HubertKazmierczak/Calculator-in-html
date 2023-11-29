@@ -7,17 +7,17 @@ class Button{
         this.element.id = id;
         this.element.style.left = `${x}px`;
         this.element.style.top = `${y}px`;
-        this.element.innerHTML=text;
+        this.element.innerText=text;
         document.getElementById("div1").appendChild(this.element);
     }
     set_function(text){
         this.element.onclick = function(){
             equation_text = equation_text + text;
             if (equation_text.length <=40){
-                Text_label.innerHTML = equation_text;
+                Text_label.innerText = equation_text;
             }
             else{
-                Text_label.innerHTML = equation_text.slice(equation_text.length - 41);
+                Text_label.innerText = equation_text.slice(equation_text.length - 41);
             }
         }
     }
@@ -61,11 +61,11 @@ const new_button = new Button("^",250,150,"^");
 new_button.set_function("**");
 function clear(){
     equation_text = "";
-    Text_label.innerHTML = equation_text;
+    Text_label.innerText = equation_text;
 }
 function back(){
     equation_text = equation_text - equation_text.slice(-1)
-    Text_label.innerHTML = equation_text;
+    Text_label.innerText = equation_text;
 }
 const back_button = new Button("back",250,200,"back");
 back_button.element.onclick = function(){
@@ -79,11 +79,11 @@ const equals = new Button("=",120,250,"=");
 equals.element.onclick = function(){
     try{
         equation_text = eval(equation_text);
-        Text_label.innerHTML = equation_text;
+        Text_label.innerText = equation_text;
     }
     catch(SyntaxError){
         equation_text = "Syntax Error";
-        Text_label.innerHTML = equation_text;
+        Text_label.innerText = equation_text;
     }
 }
 
